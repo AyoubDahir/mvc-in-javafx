@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="892.0" styleClass="doctorpane" stylesheets="@../asset/StyleSheets/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.controller.DoctorController">
+   <children>
+      <TableView fx:id="doctorTable" layoutY="48.0" onMouseClicked="#put" prefHeight="323.0" prefWidth="892.0">
+        <columns>
+          <TableColumn fx:id="colname" prefWidth="130.0" text="Doctor Name" />
+          <TableColumn fx:id="coladdress" prefWidth="130.0" text="Doctor Addres" />
+            <TableColumn fx:id="colphone" prefWidth="137.0" text="Doctor Phone" />
+            <TableColumn fx:id="colcertificatation" prefWidth="137.0" text="Doctor Certification" />
+            <TableColumn fx:id="colexipiriment" prefWidth="137.0" text="Doctor expiriment" />
+            <TableColumn fx:id="colsalary" prefWidth="137.0" text="Doctor salary" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtname" layoutX="8.0" layoutY="387.0" promptText="doctor name" />
+      <TextField fx:id="txtphone" layoutX="323.0" layoutY="387.0" promptText="doctor phone" />
+      <TextField fx:id="txtcertificate" layoutX="479.0" layoutY="387.0" promptText="certification" />
+      <TextField fx:id="txtexpiriment" layoutX="636.0" layoutY="387.0" promptText="expiriment" />
+      <Button layoutX="13.0" layoutY="435.0" mnemonicParsing="false" onAction="#saveDoctor" prefHeight="25.0" prefWidth="138.0" text="Save">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="171.0" layoutY="435.0" mnemonicParsing="false" onAction="#updateDoctor" prefHeight="25.0" prefWidth="138.0" text="Update">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="341.0" layoutY="435.0" mnemonicParsing="false" onAction="#deleteDoctor" prefHeight="25.0" prefWidth="138.0" text="Delete">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="498.0" layoutY="435.0" mnemonicParsing="false" onAction="#clearDoctor" prefHeight="25.0" prefWidth="138.0" text="clear">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="656.0" layoutY="435.0" mnemonicParsing="false" onAction="#backDoctor" prefHeight="25.0" prefWidth="138.0" text="Back">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <ComboBox fx:id="comboaddres" layoutX="165.0" layoutY="387.0" prefWidth="150.0" promptText="address" />
+      <TextField fx:id="txtsalary" layoutX="794.0" layoutY="387.0" prefHeight="25.0" prefWidth="89.0" promptText="salary" />
+      <TextField fx:id="txtsearch" layoutX="525.0" layoutY="14.0" onKeyReleased="#searcho" promptText="search" style="-fx-background-color: white;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

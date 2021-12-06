@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="btndelete" onDragDetected="#deletecunsultation" prefHeight="501.0" prefWidth="891.0" styleClass="pane" stylesheets="@../asset/StyleSheets/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.controller.consultationControlelr">
+   <children>
+      <ComboBox fx:id="combopatientid" layoutX="14.0" layoutY="339.0" prefWidth="150.0" promptText="patient ID " />
+      <TextField fx:id="txtsymptoms" layoutX="176.0" layoutY="339.0" promptText="symptoms" />
+      <TextField fx:id="txtdiagnosis" layoutX="20.0" layoutY="388.0" promptText="diagnosis" />
+      <TextField fx:id="txttreatment" layoutX="184.0" layoutY="388.0" promptText="treatment" />
+      <TextField fx:id="txtcomment" layoutX="342.0" layoutY="339.0" promptText="comments" />
+      <TableView fx:id="cunsultationTable" layoutX="20.0" layoutY="29.0" onMouseClicked="#showclicked" prefHeight="212.0" prefWidth="601.0">
+        <columns>
+          <TableColumn fx:id="colpatientid" prefWidth="75.0" text="patient ID" />
+          <TableColumn fx:id="colSymptoms" prefWidth="75.0" text="Symptoms" />
+            <TableColumn fx:id="coldiagnosis" prefWidth="75.0" text="diagnosis" />
+            <TableColumn fx:id="coltreatment" prefWidth="75.0" text="treatment" />
+            <TableColumn fx:id="colcomment" prefWidth="75.0" text="comments" />
+        </columns>
+      </TableView>
+      <Button layoutX="20.0" layoutY="433.0" mnemonicParsing="false" onAction="#registercunsult" prefHeight="25.0" prefWidth="149.0" text="save">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="184.0" layoutY="433.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="149.0" text="update">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="354.0" layoutY="433.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="149.0" text="delete">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

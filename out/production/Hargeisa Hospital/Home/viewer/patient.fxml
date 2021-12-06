@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="909.0" styleClass="doctorpane" stylesheets="@../asset/StyleSheets/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.controller.PatientController">
+   <children>
+      <TableView fx:id="patientTable" layoutX="9.0" layoutY="48.0" onMouseClicked="#showitems" prefHeight="323.0" prefWidth="891.0">
+        <columns>
+          <TableColumn fx:id="colname" prefWidth="130.0" text="patient Name" />
+          <TableColumn fx:id="colage" prefWidth="130.0" text="age" />
+            <TableColumn fx:id="coladdress" prefWidth="137.0" text="Address" />
+            <TableColumn fx:id="colphone" prefWidth="137.0" text="patient phone" />
+            <TableColumn fx:id="coldob" prefWidth="211.0" text="Date of Birth" />
+            <TableColumn fx:id="coldoctorid" prefWidth="192.0" text="Doctor id" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtname" layoutX="8.0" layoutY="387.0" promptText="Patient Name" />
+      <TextField fx:id="txtage" layoutX="186.0" layoutY="387.0" promptText="age" />
+      <TextField fx:id="txtphone" layoutX="532.0" layoutY="387.0" prefHeight="25.0" prefWidth="138.0" promptText="phone" />
+      <TextField fx:id="txtdob" layoutX="689.0" layoutY="387.0" prefHeight="25.0" prefWidth="117.0" promptText="date of birth" />
+      <Button layoutX="13.0" layoutY="435.0" mnemonicParsing="false" onAction="#savepatient" prefHeight="25.0" prefWidth="138.0" text="Save">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="191.0" layoutY="435.0" mnemonicParsing="false" onAction="#updatepatient" prefHeight="25.0" prefWidth="138.0" text="Update">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="375.0" layoutY="440.0" mnemonicParsing="false" onAction="#deletepatient" prefHeight="25.0" prefWidth="138.0" text="Delete">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <Button layoutX="551.0" layoutY="435.0" mnemonicParsing="false" onAction="#clearpatient" prefHeight="25.0" prefWidth="138.0" text="clear">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="roundButton" />
+         </styleClass>
+      </Button>
+      <ComboBox fx:id="comboaddres" layoutX="356.0" layoutY="392.0" prefWidth="150.0" promptText="address" />
+      <ComboBox fx:id="comboid" layoutX="812.0" layoutY="387.0" prefHeight="25.0" prefWidth="88.0" promptText="doctorid" />
+   </children>
+</Pane>
