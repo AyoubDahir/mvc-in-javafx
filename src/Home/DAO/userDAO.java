@@ -53,10 +53,10 @@ public class userDAO
     public void selectuser(user userobj) throws SQLException, IOException {
         query="select * from user";
         PreparedStatement statement=con.prepareStatement(query);
-        ResultSet st=statement.executeQuery();
-        if(st.next())
+        int result= statement.executeUpdate();
+        if(result==1)
         {
-            JOptionPane.showMessageDialog(null,"welcome dear "+userobj.getUsername());
+//            JOptionPane.showMessageDialog(null,"welcome dear "+userobj.getUsername());
             url obj=new url();
             obj.show("Hospital signup","/Home/viewer/dashboard.fxml");
 

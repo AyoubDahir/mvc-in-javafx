@@ -9,10 +9,10 @@ import java.io.IOException;
 
 public class url
 {
-    public static void show(String title, String url) throws IOException {
+    public  void show(String title, String url) throws IOException {
        Stage stage=new Stage();
        stage.setTitle(title);
-       Parent root=FXMLLoader.load(url.class.getResource(url));
+       Parent  root=FXMLLoader.load(getClass().getResource(url));
        Scene scene=new Scene(root);
        stage.setScene(scene);
        stage.show();
